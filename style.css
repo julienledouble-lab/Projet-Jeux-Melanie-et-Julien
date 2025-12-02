@@ -1,0 +1,277 @@
+body{
+    background-color: #FFE4A5;
+    height: 100vh; 
+}
+
+.top_section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;   
+}
+
+
+/* bloc upgrade */
+
+.bloc_upgrade{
+    width: 338px;
+    height: 181px;
+    background: linear-gradient(to bottom, #E58933, #4A2706);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    border: 2px solid black;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-radius: 20px;
+}
+
+.littleupgrade{
+    width: 304px;
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    gap: 19px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px; 
+}
+
+.pictureupgrade{
+    width: 64px;
+    height: 64px;
+}
+
+/* fin du bloc upgrade */
+
+
+
+/* titre du jeu */
+.bloctitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 900px;
+    height: 230px;
+    margin: 0 auto;
+    background-image: url(images/panneau\ titre.png);
+    background-position: center;
+    background-size: 900px 450px;
+    background-repeat: no-repeat;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.titletxt{
+    font-size: 105px;
+    color: rgb(255, 255, 255);
+    font-family: 'Bangers', sans-serif;
+}
+
+.level{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-top: 200px;
+
+}
+
+.backgroundlevel{
+    width: 199px;
+    height: 120px;
+}
+
+.lvl{
+    position: absolute;
+    font-size: 36px;
+    color: rgb(255, 255, 255);
+    font-family: 'Bangers', sans-serif;
+}
+/* fin du titre du jeu */
+
+
+
+
+
+/* bloc home */
+
+.home{
+    width: 90px;
+    height: 60px;
+    background: linear-gradient(to bottom, #E58933, #4A2706);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid black;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-radius: 20px;
+}
+
+.picturehome{
+    width: 80px;
+    height: 80px;
+}
+
+/* fin du bloc home */
+
+
+/* bloc sound */
+
+.sound{
+    position: absolute;
+    top: 70px;
+    left: 1600px;
+    width: 90px;
+    height: 60px;
+    background: linear-gradient(to bottom, #E58933, #4A2706);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid black;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-radius: 20px;
+}
+
+.picturesound{
+    width: 80px;
+    height: 80px;
+}
+
+/* fin du bloc sound */
+
+
+
+
+/* 3 blocs du milieu */
+
+.threeblocs{
+    width: 1395px;
+    height: 744px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+/* fin des 3 blocs du milieu */
+
+
+
+/* bloc améliorations et inventaire */
+
+.side_section{
+    width: 338px;
+    height: 744px;
+    background: linear-gradient(to bottom, #E58933, #4A2706);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid black;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-radius: 20px;
+}
+
+.titlesection{
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+    font-family: 'Bangers', sans-serif;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.upgrade{
+    width: 314px;
+    height: 659px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 15px;
+}
+
+.an_upgrade{
+    width: 314px;
+    height: 127px;
+    display: flex;
+    flex-direction: row;
+    background-image: url(images/Améliorations/panneau\ fond.png);
+    background-size: 380px 310px;
+    background-position: center;
+    overflow: visible;
+}
+
+.pictureimprovements{
+    width: 132px;
+
+}
+
+.bloc_txt_an_upgrade{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title_an_upgrade{
+    font-family: 'bangers';
+    color: #ffffff;
+    align-items: center;
+}
+
+.littletext_an_upgrade{
+    font-family: 'bangers';
+    color: #ffffff;
+}
+
+/* fin des blocs améliorations et inventaire */
+
+
+/* bloc du milieu */
+
+.centralbloc{
+    width: 661px;
+    height: 744px;
+    background: linear-gradient(to bottom, #E58933, #4A2706);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid black;
+    gap: 32px;
+    padding-top: 25px;
+    padding-bottom: 11px;
+    padding-right: 18px;
+    padding-left: 18px;
+    border-radius: 20px;
+}
+
+.bankbloc{
+    width: 258px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.centralpicture{
+    width: 625px;
+    height: 560px;
+}
+
+/* bloc du milieu */
+
+
