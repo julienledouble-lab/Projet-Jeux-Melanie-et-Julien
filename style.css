@@ -75,7 +75,7 @@ body {
   justify-content: center;
   width: 50%;
   height: 100%;
-  padding-top: 4%;
+  padding-top: 2%;
 }
 
 .main_title {
@@ -109,7 +109,6 @@ body {
   width: 18%;
   z-index: 20;
   box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.4);
-
 }
 
 .lvl {
@@ -120,6 +119,8 @@ body {
   letter-spacing: 1.28px;
 }
 
+
+
 /* RIGHT SECTION */
 .right_top_section {
   display: flex;
@@ -127,8 +128,8 @@ body {
   justify-content: flex-end;
   width: 25%;
   height: 100%;
-  padding-top: 10px;
-  padding-right: 10px;
+  padding-top: 20px;
+  padding-right: 20px;
 
 }
 
@@ -166,6 +167,7 @@ body {
   flex-direction: column;
   align-items: center;
   height: 100%;
+  max-height: 98%;
   background: linear-gradient(to bottom, #e58933, #4a2706);
   border-radius: 20px;
   border: 3px solid #000;
@@ -192,7 +194,7 @@ body {
 }
 
 .upgrade_by_clic{
-  width: 95%;
+  width: 90%;
   height: 15%;
   background: radial-gradient(50% 50% at 50% 50%, #BF8F1E 46.63%, #91773B 97.12%);
   border-radius: 20px;
@@ -203,6 +205,31 @@ body {
   border: 2px solid black;
   border-radius: 20px;
   gap: 19px;
+  padding: 10px 5px;
+}
+
+.upgrade_by_clic::-webkit-scrollbar-thumb {
+  background: #291e14;
+  border-radius: 20px;
+}
+
+.upgrade_by_clic::-webkit-scrollbar-track {
+  background: rgb(124, 122, 122);
+}
+
+.upgrade_by_clic_inventory{
+  width: 90%;
+  height: 15%;
+  background: radial-gradient(50% 50% at 50% 50%, #BF8F1E 46.63%, #91773B 97.12%);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  border: 2px solid black;
+  border-radius: 20px;
+  gap: 19px;
+  padding: 10px 5px;
 }
 
 .picture_upgrade_by_clic {
@@ -220,7 +247,7 @@ body {
 
 }
 
-.hover_upgrade_by_clic_info {
+.upgrade-label {
   display: none;
   position: absolute;
   top: 80%;
@@ -241,7 +268,13 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  z-index: 10;
 }
+
+.picture_upgrade_by_clic_and_hover:hover .upgrade-label {
+  display: flex;
+}
+
 
 .bloc_hover_text{
   width: 100%;
@@ -260,9 +293,7 @@ body {
 .text_in_hover_text{
   margin: 0;
 }
-.picture_upgrade_by_clic_and_hover:hover .hover_upgrade_by_clic_info {
-  display: flex;
-}
+
 
 .hover_upgrade_by_clic_info_reversed {
   display: none;
@@ -291,10 +322,7 @@ body {
   display: flex;
 }
 
-
-
-
-
+/* ✅ SCROLL VERTICAL pour upgrade_generator */
 .upgrade_generator{
     width: 95%;
     height: 80%;
@@ -303,8 +331,16 @@ body {
     padding-right: 2%;
 }
 
+/* ✅ SCROLL VERTICAL pour upgrade_generator_inventory */
+.upgrade_generator_inventory{
+    width: 95%;
+    height: 80%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 2%;
+}
+
 .upgrade_generator::-webkit-scrollbar {
-  
   width: 6px;
 }
 
@@ -317,7 +353,20 @@ body {
   background: rgb(124, 122, 122);
 }
 
-.one_generator_upgrade{
+.upgrade_generator_inventory::-webkit-scrollbar {
+  width: 6px;
+}
+
+.upgrade_generator_inventory::-webkit-scrollbar-thumb {
+  background: #291e14;
+  border-radius: 20px;
+}
+
+.upgrade_generator_inventory::-webkit-scrollbar-track {
+  background: rgb(124, 122, 122);
+}
+
+.upgrade-wrapper_one_generator_upgrade{
   width: 100%;
   height: 23%;
   display: flex;
@@ -330,6 +379,23 @@ body {
   position: relative;
   outline: 0 solid #368F8C;
   border-radius: 20px;
+}
+
+/* ✅ AJOUT GAP entre les générateurs (amélioration et inventaire) */
+.generator-wrapper{
+  width: 100%;
+  height: 23%;
+  display: flex;
+  align-items: center;
+  background-image: url(images/Améliorations/panneau\ fond.png);
+  background-size: 100% 100%;
+  background-position: center;
+  overflow: visible;
+  background-repeat: no-repeat;
+  position: relative;
+  outline: 0 solid #368F8C;
+  border-radius: 20px;
+  margin-bottom: 10px; /* ✅ GAP ENTRE LES GÉNÉRATEURS */
 }
 
 .hover_upgrade_info {
@@ -355,7 +421,7 @@ body {
   z-index: 10;
 }
 
-.one_generator_upgrade:hover .hover_upgrade_info {
+.upgrade-wrapper_one_generator_upgrade:hover .upgrade-label{
   display: flex;
 }
 
@@ -437,14 +503,15 @@ body {
   height: 100%;
 }
 
-.title_one_generator_upgrade {
+.textblocked {
   font-family: "bangers";
   color: #ffffff;
   align-items: center;
   line-height: 120%;
   font-size: 22px;
   letter-spacing: 1.28px;
-  margin-bottom: 0;
+  margin: 0;
+  text-align: center;
 }
 
 .cost_one_generator_upgrade {
@@ -453,6 +520,7 @@ body {
   font-size: 20px;
   letter-spacing: 1px;
   margin-top: 0;
+  margin: 0;
 }
 
 .hover_upgrade_info_reversed {
@@ -494,8 +562,8 @@ body {
   height: 100%;
   border: 3px solid #000;
   filter: drop-shadow(20px 10px 5px rgba(0,0,0,0.4));
-
-
+  position: relative;
+  z-index: 0;
 }
 
 .txt_central_bloc{
@@ -504,22 +572,23 @@ body {
   align-items: center;
   margin-bottom: 0;
   height: 10%;
+  margin-top: 10px;
 }
 
-.bank_user {
+.total_output {
   font-size: 32px;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   font-family: "Bangers", sans-serif;
   letter-spacing: 1.28px;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .unity_per_second{
   font-size: 32px;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   font-family: "Bangers", sans-serif;
   letter-spacing: 1.28px;
-  margin-top: 8px;
+  margin-top:0;
   margin-bottom: 2px;
 }
 
@@ -537,34 +606,29 @@ body {
     cursor: pointer;
 }
 
-.coffee-bubble {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 20px;
-    height: 20px;
-    background: radial-gradient(circle, #6f4e37 0%, #a9745b 70%);
-    border-radius: 50%;
-    opacity: 0.8;
-    transform: translate(-50%, -50%) scale(0.5);
-    animation: bubblePop 0.8s ease-out forwards;
-    pointer-events: none;
-    z-index: 5;
-}
-
-@keyframes bubblePop {
-    0% { transform: translate(-50%, -50%) scale(0.5); opacity: 0.8; }
-    50% { transform: translate(-50%, -100%) scale(1.2); opacity: 0.6; }
-    100% { transform: translate(-50%, -150%) scale(0); opacity: 0; }
-}
-
-.addcoffee{
-  width: 10%;
+.add_coffee{
+  width: 20%;
   height: 20%;
   display: flex;
+  align-items: center;
+  display: none;
+  position : absolute;
+  pointer-events: none;
+  z-index: 10;
+  transform: translate(-50%, -50%);
 }
 
-.pictureaddcoffee{
+.picture_add_one_coffee{
   width: 40%;
-  height: 40%;
+  height: 55%;
+}
+.picture_add_coffee{
+  width: 50%;
+  height: 75%;
+}
+
+.clic_zone{
+  width: 60%;
+  height: 160%;
+  margin-bottom: 3%;
 }
